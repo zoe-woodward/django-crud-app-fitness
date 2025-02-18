@@ -1,0 +1,144 @@
+.workout-container {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.workout-img {
+    width: 100%;
+    height: 300px;  
+    overflow: hidden;
+}
+
+.workout-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    object-position: center; 
+}
+
+.btn.warn {
+    background-color: rgb(46, 198, 236);
+    color: #000000;
+    border: 2px solid rgb(46, 198, 236);
+    border-radius: 20px;
+}
+
+.btn.warn:hover {
+    transform: scale(1.05);
+}
+
+.btn.danger {
+    background-color: #f591bc;
+    color: #000000;
+    border: 2px solid #f591bc;
+    border-radius: 20px;
+}
+
+.btn.danger:hover {
+    transform: scale(1.05);
+}
+
+.usr-img {
+    width: 100%;
+    border-radius: var(--card-border-radius);
+}
+
+.workout-details {
+    width: 98%;
+    padding: 20px;
+}
+
+.workout-details h1 {
+    font-size: var(--font-xxl);
+    margin: 15px 0 3px;
+}
+
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.subsection-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.subsection-content {
+    margin: 0 8px;
+}
+
+.activities table {
+    width: calc(100% - 16px);
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 8px;
+}
+
+.activities td {
+    padding: 8px 5px;
+    font-size: var(--font-reg);
+}
+
+.activities th {
+    font-size: var(--font-l);
+    padding: 5px 5px 0;
+    border-bottom: rgb(36, 116, 248) solid 2px;
+}
+
+.activities tr:nth-child(even) {
+    background-color: #f3f3fd;
+}
+
+.btn {
+    padding: 3px 10px;
+    margin-left: 10px;
+}
+
+#file-input {
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+}
+
+#file-name {
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (min-width: 768px) {
+    .workout-container {
+        padding: 35px 30px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .workout-img {
+        width: 25%;
+        max-width: 250px;
+        margin-right: 25px;
+    }
+
+    .activity-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .activity-container > section {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .activity-container {
+        padding: 0 40px;
+    }
+}
