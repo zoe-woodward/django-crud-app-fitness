@@ -1,15 +1,17 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 class Workout(models.Model):
-    name = models.CharField(max_length=100)
-    image_filename = models.CharField(max_length=255, default='images/logo.avif')
+   name = models.CharField(max_length=100)
+   image_filename = models.CharField(max_length=255, default='images/logo.avif')
+   user = models.ForeignKey(User, on_delete=models.CASCADE)
     
-    def __str__(self):
-        return self.name
+   def __str__(self):
+    return self.name
     
-    def get_absolute_url(self):
-        return reverse('workout-detail', kwargs={'workout_id': self.id})
+   def get_absolute_url(self):
+    return reverse('workout-detail', kwargs={'workout_id': self.id})
 
 
 
